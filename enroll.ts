@@ -30,11 +30,10 @@ const [enrollmentKey, _bump] = PublicKey.findProgramAddressSync(
         .signers([keypair])
         .rpc();
   
-      console.log(
-        `Transaction success! Transaction signature: https://explorer.solana.com/tx/${txhash}?cluster=devnet`
-      );
+        console.log(`Success! Check out your TX here:
+        https://explorer.solana.com/tx/${txhash}?cluster=devnet`);
     } catch (e) {
-      console.error(`Something is wrong: ${e}`);
+      console.error(`Oops, something went wrong: ${e}`)
     }
   })();
   
